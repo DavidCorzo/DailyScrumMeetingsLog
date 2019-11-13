@@ -1,0 +1,42 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Scrum Dailys}{5}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Lista de stories}{5}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Introducci\IeC {\'o}n}{5}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Puestos}{6}{section.1.3}% 
+\contentsline {part}{I\hspace {1em}Sprint \# 1}{7}{part.1}% 
+\contentsline {chapter}{\numberline {2}Resumen \& impedimentos notorios}{9}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Duraci\IeC {\'o}n del sprint}{9}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Stories hechos}{9}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Impedimentos notorios}{9}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Anesveth Maatens - P.O.}{9}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Ian Jenatz - Grupo de trabajo}{9}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Adriana Mundo - Grupo de trabajo}{9}{subsection.2.3.3}% 
+\contentsline {part}{II\hspace {1em}Sprint \# 2}{11}{part.2}% 
+\contentsline {section}{\numberline {2.4}Duraci\IeC {\'o}n del sprint}{13}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Stories hechos}{13}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Impedimentos notorios}{13}{section.2.6}% 
+\contentsline {subsection}{\numberline {2.6.1}Anesveth Maatens - P.O.}{13}{subsection.2.6.1}% 
+\contentsline {subsection}{\numberline {2.6.2}Ian Jenatz - Grupo de trabajo}{13}{subsection.2.6.2}% 
+\contentsline {subsection}{\numberline {2.6.3}Adriana Mundo - Grupo de trabajo}{13}{subsection.2.6.3}% 
+\contentsline {part}{III\hspace {1em}Sprint \# 3}{15}{part.3}% 
+\contentsline {section}{\numberline {2.7}Duraci\IeC {\'o}n del sprint}{17}{section.2.7}% 
+\contentsline {section}{\numberline {2.8}Stories hechos}{17}{section.2.8}% 
+\contentsline {section}{\numberline {2.9}Impedimentos notorios}{17}{section.2.9}% 
+\contentsline {subsection}{\numberline {2.9.1}Anesveth Maatens - P.O.}{17}{subsection.2.9.1}% 
+\contentsline {subsection}{\numberline {2.9.2}Ian Jenatz - Grupo de trabajo}{17}{subsection.2.9.2}% 
+\contentsline {subsection}{\numberline {2.9.3}Adriana Mundo - Grupo de trabajo}{17}{subsection.2.9.3}% 
+\contentsline {part}{IV\hspace {1em}Sprint \# 4}{19}{part.4}% 
+\contentsline {section}{\numberline {2.10}Duraci\IeC {\'o}n del sprint}{21}{section.2.10}% 
+\contentsline {section}{\numberline {2.11}Stories hechos}{21}{section.2.11}% 
+\contentsline {section}{\numberline {2.12}Impedimentos notorios}{21}{section.2.12}% 
+\contentsline {subsection}{\numberline {2.12.1}Anesveth Maatens - P.O.}{21}{subsection.2.12.1}% 
+\contentsline {subsection}{\numberline {2.12.2}Ian Jenatz - Grupo de trabajo}{21}{subsection.2.12.2}% 
+\contentsline {subsection}{\numberline {2.12.3}Adriana Mundo - Grupo de trabajo}{21}{subsection.2.12.3}% 
+\contentsline {part}{V\hspace {1em}Sprint \# 5}{23}{part.5}% 
+\contentsline {section}{\numberline {2.13}Duraci\IeC {\'o}n del sprint}{25}{section.2.13}% 
+\contentsline {section}{\numberline {2.14}Stories hechos}{25}{section.2.14}% 
+\contentsline {section}{\numberline {2.15}Impedimentos notorios}{25}{section.2.15}% 
+\contentsline {subsection}{\numberline {2.15.1}Anesveth Maatens - P.O.}{25}{subsection.2.15.1}% 
+\contentsline {subsection}{\numberline {2.15.2}Ian Jenatz - Grupo de trabajo}{25}{subsection.2.15.2}% 
+\contentsline {subsection}{\numberline {2.15.3}Adriana Mundo - Grupo de trabajo}{25}{subsection.2.15.3}% 
+\contentsline {part}{VI\hspace {1em}Sprint \# 6}{27}{part.6}% 
