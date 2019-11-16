@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*
  * recursividad_6
  * 41) Realizar una función que calcule el numero n elementos de la serie Fibonacci 
@@ -6,8 +8,10 @@ public class recursividad_41 {
 
     public static void main(String[] args) {
         //
-        int fib = 45;
-        System.out.println("El " + fib + " numero en la secuencia fibonacci es: " + fibonacci(fib));
+        System.out.println("Ingrese el numero de numeros de fibonacci: ");
+        Scanner obj = new Scanner(System.in);
+        int fib = obj.nextInt();
+        System.out.println("El " + fib + "uavo numero en la secuencia fibonacci es: " + fibonacci(fib));
     }
 
     public static int fibonacci(int x) {

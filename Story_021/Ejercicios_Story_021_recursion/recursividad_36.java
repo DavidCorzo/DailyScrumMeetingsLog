@@ -1,10 +1,15 @@
+import java.util.Scanner;
+
 /*
  * recursividad
  * 36) Dado un numero ‘n’ se debe realizar una sumatoria recursiva de 0 hasta el número n 
  */
 public class recursividad_36 {
     public static void main(String[] args) {
-        int numero = 9;
+        System.out.println("    36) Sumatoria ");
+        System.out.println("Ingrese un numero: ");
+        Scanner obj = new Scanner(System.in);
+        int numero = obj.nextInt();
         int resultado = sumatoria(numero);
         System.out.println("Resultado: " + resultado);
     }

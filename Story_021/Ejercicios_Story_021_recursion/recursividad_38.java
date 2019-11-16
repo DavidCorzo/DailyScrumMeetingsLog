@@ -1,13 +1,17 @@
+import java.util.Scanner;
+
 /**
- * recursividad_3
- * 38) Dado un String se debe de invertir el String, utilizando recursión 
+ * recursividad_3 38) Dado un String se debe de invertir el String, utilizando
+ * recursión
  */
 public class recursividad_38 {
 
     public static void main(String[] args) {
-        //
-        System.out.println("Normal: Programacion II");
-        System.out.println("Invertido: " + reverse_chain("Programacion II"));
+        System.out.println("    38) Reverse String");
+        System.out.println("Ingrese un string: ");
+        Scanner obj = new Scanner(System.in);
+        String string = obj.nextLine();
+        System.out.println("Invertido: " + reverse_chain(string));
     }
 
     public static String reverse_chain(String chain) {

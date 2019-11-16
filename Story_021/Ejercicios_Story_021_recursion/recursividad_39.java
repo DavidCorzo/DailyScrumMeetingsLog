@@ -1,13 +1,18 @@
+import java.util.Scanner;
+
 /**
- * recursividad_4
- * 39) Realice la función pow de manera recursiva 
+ * recursividad_4 39) Realice la función pow de manera recursiva
  */
 public class recursividad_39 {
     // Implementar una función que reciba como primer argumento la base y segundo el
     // exponente usando recursión.
     public static void main(String[] args) {
-        int x = 2;
-        int n = 10;
+        System.out.println("    39) Pow");
+        System.out.println("Ingese una base: ");
+        Scanner obj = new Scanner(System.in);
+        int x = obj.nextInt();
+        System.out.println("Ingrese un exponente: ");
+        int n = obj.nextInt();
         System.out.println("pow(" + x + "," + n + ") = " + (pow(x, n)));
     }
 

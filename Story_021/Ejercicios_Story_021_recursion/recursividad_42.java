@@ -5,9 +5,14 @@
 public class recursividad_42 {
     public static void main(String[] args) {
         int arreglo_de_enteros[] = { 0, 1, 2, 3, 4, -1000, 5, 6, 7, 8, -1000000 };
+        System.out.println("Modificar el codigo para ver el arreglo de enteros, por el momento este es: ");
+        for (int i = 0; i < arreglo_de_enteros.length; i++) {
+            System.out.println("[" + i + "]" + " = " + arreglo_de_enteros[i]);
+        }
+        System.out.println("--------------------------------------------------");
         int index = 0;
         int minimum = min(arreglo_de_enteros, index);
-        System.out.println("Entero mas pequeno del arreglo es: " + minimum);
+        System.out.println("\nEntero mas pequeno del arreglo es: " + minimum);
     }
 
     public static int min(int arreglo_de_enteros[], int index) {
