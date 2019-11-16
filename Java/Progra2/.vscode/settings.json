@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "iostream": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "workbench.quickOpen.closeOnFocusLost": false,
+    "debug.focusWindowOnBreak": false
+}
