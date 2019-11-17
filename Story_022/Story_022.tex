@@ -1,5 +1,5 @@
 \documentclass{article}
-\title{Diferencias entre variables static y final}
+\title{Diferencias entre static y final}
 \author{David Corzo, Anesveth Maatens, Ian Jenatz \& Adriana Mundo}
 \date{2019-Nov-14 23:15:56}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,10 +46,10 @@
 \section{Static \& Final}
 Las palabras ``static'' \& ``final'' en un programa son keywords que pueden ser aplicadas a una clase, variable o método. La gramática para implementar una variable, clase o método en Java es simplemente poner el keyword ``final'' o ``static'' al iniciar la declaración. Uno de los usos más familiares y recurrentes que tiene en particular las estáticas son que se utilizan para el método ``main'', dicho método como ya se sabe es el punto de entrada al programa; En este ensayo se tratará de explicar cosas como por qué se declara ``main'' como ``static'' y para que nos funciona el keyword ``final''.
 
-\section{Definición de Static}
-\emph{\textbf{Definición de ``Static":} Static en Java es una keyword que es aplicable a clases, variables, métodos y más; cuando se declara el keyword static antes de un método, variable, etcétera se convierte en global a todos los demás miembros de la clase.} Ahorita cobra cierto valor que el método de entrada al programa (main) por que recordar que se declara como ``\verb|public| \textbf{static} \verb|void main(String[] args) { <<acciones>>; }|''.
+\section{Definición de ``static''}
+\emph{\textbf{Definición de ``Static":} Static en Java es una keyword que es aplicable a clases, variables y métodos; cuando se declara el keyword static antes de un método, variable, etcétera se convierte en global a todos los demás miembros de la clase.} Ahorita cobra cierto valor que el método de entrada al programa (main) por que recordar que se declara como ``\verb|public| \textbf{static} \verb|void main(String[] args) { <<acciones>>; }|''.
 
-\subsubsection{Tipos relevantes de static}
+\subsection{Tipos relevantes de ``static''}
 Las variables static tienen ciertas peculiaridades entre ellas, por ejemplo:
     \begin{itemize}
         \item Las variables estáticas tiene la validez de una variable global para cualquier otro miembro de la misma clase.
@@ -63,8 +63,104 @@ Los métodos estáticos por otro lado tienen otras características notables que
 
 Las clases estáticas por otro lado sólo pueden ser ejecutadas si se instancian primero. \newline 
 
+\subsection{Implicaciones de ``static''}
+\begin{itemize}
+    \item Los elementos estáticos no pueden usarse con un elemento no estático o llamar a un método no estático directamente.
+    \item Keywords de Java como ``this.'' o ``super'' no pueden se utilizadas en este contexto.
+    \item Solo pueden acceder a información tipo static.
+    \item Los métodos no pueden ser ``overriden''.
+    \item Las variables static van como parte de la definición de la clase no en el heap.
+    \item Comprometen el concepto de encapsulación ya que la implementación técnica de las mismas permiten que el estado se mantenga a lo largo de todas las instancias de la clase, esto compromete las encapsulaciones que sean de interés.
+    \item El proceso de garbage collecting es diferente ya que se collecionan como basura cuando la clase en sí se collecta, esto se debe a que los elementos estáticos son parte de la definición de la clase.
+    \item Static se usa primordialmente para la memoria, significa que solo hay una copia de el elemento en memoria que es compartida por la instacia de la clase.
+\end{itemize}
 
-\section{}
+\subsubsection{Ejemplo del uso de ``static''}
+\begin{Verbatim}[breaklines=true, breakanywhere=true]
+    public class Static {
+        static int x1 = 10;
+        static int x2 = 10;
+
+        public static void main(String[] args) {
+            int sum = x1 + x2;
+            System.out.println(sum);
+        }
+    }
+\end{Verbatim}
+\emph{\textbf{Recordar lo siguiente: }En el ejemplo anterior si yo fuese a no declarado x1 \& x2 como static no las pudiera haber sumado posteriormente en el método main.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Definición de ``Final''}
+\emph{\textbf{Definición de ``Final":} En Java se define con el keyword ``final'' previo a las variables, clases, métodos que se quiere que tengan las características de final, básicamente la función que desempeñan es darle a dicho elemento del programa la característica de que no se puede modificar después en el programa, estas deben de ser inicializadas al momento de su declaración. } En otras palabras cuando se declara un elemento previamente mencionado como final en un programa de Java se le trata como que si fuese constante ya que no se puede modificar.
+
+\subsection{Usos de ``final''}
+Entre todos los posibles usos que se le pueden dar a la declaración final en una clase, variable o método se usa y es muy util en algunos casos concretos por ejemplo, declara una variable final sirve para dar la característica que no se modifique dicha variable osea se deja como una constante desde la declaración hasta el final del programa. \newline 
+
+Otro ejemplo del uso de final en métodos es que no se permita sobre escribir un método, hay casos que se hereda un método de una clase padre y al pasar esto puede uno modificar el método que se heredo, hay veces que por razones varias se quiere que se use el método pero que no se modifique por lo que se usa final para asegurar que no se pueda modificar dicho método. \newline 
+
+Otro ejemplo es cuando se declara una clase como final se previene evitar herencia, este es otro uso de el keyword final en Java.
+
+\subsubsection{Implicaciones del uso de ``final''}
+\begin{itemize}
+    \item Se debe de tener en cuenta que siempre que se declare un elemento de tipo final se debe inicializar en algún momento en el programa, de lo contrario Java tirará un error de compilación.
+    \item Final no es modificable, irónicamente una variable final es una constante.
+    \item Se puede agregar o remover objetos de un array con declaración final.
+    \item Se tiene la convención entre programadores de siempre declarar las variables de tipo final en mayúsculas.
+    \item Si no se inicializa un elemento estático en el momento de su declaración, se debe de declarar dentro de un ``instance-initializer block'' o dentro de un constructor, si se tiene múltiples constructores en la clase se debe inicializar en todos, otra manera es dentro de un ``static block''.
+\end{itemize}
+
+\subsubsection{Ejemplo de declaración de ``final''}
+\begin{Verbatim}[breaklines=true, breakanywhere=true]
+    class Final {
+        public static void main(String[] args) {
+            final double pi = 3.14; // aproximado
+            System.out.println(pi);
+        }
+    }
+\end{Verbatim}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Best of both worlds, final static together}
+Usar static o final no es un asunto mutuamente excluyente, se pueden declarar variables que son static y final a la vez, por ejemplo: 
+\begin{Verbatim}[breaklines=true, breakanywhere=true]
+    final static int x = 12;
+\end{Verbatim}
+\subsection{Implicación de usar las dos}
+\begin{itemize}
+    \item Se debe inicializar la variable en algún momento del programa.
+    \item Los métodos de inicialización son los mismos que se hablaron en las implicaciones de final. (static blocks por ejemplo).
+    \begin{Verbatim}[breaklines=true, breakanywhere=true]
+        class Algo {
+            final static int x; 
+            {
+                x = 12;
+            }
+        }
+    \end{Verbatim}
+    
+    \item No son modificables media vez estén inicializadas con un valor.
+    \item Declarar una variable como final static es lo mismo que crear una constante.
+\end{itemize}
+
+
+
+
+\section{Fuentes de investigación}
+\begin{enumerate}[label={[}\arabic*{]}:]
+    \item \url{http://gopaldas.org/core-java/advantages-and-disadvantages-of-using-static-in-java/}
+    \item \url{https://javarevisited.blogspot.com/2013/07/when-to-make-method-static-in-java.html}
+    \item \url{https://www.javatpoint.com/static-keyword-in-java}
+    \item \url{https://www.geeksforgeeks.org/final-keyword-java/}
+    \item \url{https://www.geeksforgeeks.org/final-static-variable-java/}
+\end{enumerate}
+
+
+
+
 
 
 
