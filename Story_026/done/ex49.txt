@@ -1,0 +1,45 @@
+>>>>>>>>>>>>> método 1:
+    public static int banana(int[] a) {
+            int grape = 0;
+            int i = 0;
+            while (i < a.length) {
+                grape = grape + a[i];
+                i++;
+            }
+            return grape;
+        }
+
+>>>> Explicación:
+El método presentado arriba tiene las siguientes variables:
+- grape
+- i
+El método banana lo que hace básicamente es recibir como parámetro un arreglo de enteros de longitud desconcocida, tras recibir esto inicializa las variable grabe y i, grape es la variable acumulativa y i es la variable iteradora, en el while que se agrega después se puede observar que grape acumula su valor actual y el que esté en el indice i del arreglo a, posteriormente retorna la variable acumulativa, es básicamente sumar todos los elementos de una lista cada uno con sí mismo.
+_____________________________________________________________________________________________________________________________________________________________________
+>>>>>>>>>>>>> método 2:
+public static int apple(int[] a, int p) {
+        int i = 0;
+        int pear = 0;
+        while (i < a.length) {
+            if (a[i] == p) {
+                pear++;
+            }
+            i++;
+        }
+        return pear;
+    }
+>>>>> Explicación:
+En el método apple se presentan las variables i, p y pear, también el arreglo a, el método primero inicializa el contador i en 0, el contador de ocurrencias en 0, posteriormente en el while se itera en el arreglo a, cuando se cumple la condición con que el índice i del arreglo a sea lo que esté declarado en p se agrega al contador de ocurrencias de p uno, el método cuenta las ocurrencias de la variable p en un arreglo de enteros.
+_____________________________________________________________________________________________________________________________________________________________________
+>>>>>>>>>>>>> método 3:
+public static int grapefruit(int[] a, int p) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == p) {
+                return i;
+            }
+        }
+        return -1;
+    }
+>>>>> Explicación:
+En el método grapefruit se recibe como parametro un arreglo de enteros a y un entero p, despues se itera por la cantidad de elementos que existiesen en el arreglo a, si algúno de los elementos en a es igual a p se retornara el índice el cual se encontró dicho elemento que es igual a p, si no se encuentra en la lista ningún elemento igual a p se retorna -1.
+
+
